@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+
+    <!--class 标签表示当前需要映射的实体配置
+      属性：name 当前需要映射的实体类名称
+           table 当前实体类对应的数据库表名
+           schema 当前数据库的用户名称
+    -->
+    <class name="com.bay.model.NewsUser" table="news_user" schema="scott">
+        <!--id 表示主键
+            name
+        -->
+        <id name="id" type="java.lang.Integer">
+            <column name="id"/>
+            <!--<generator class="increment"/>-->
+        </id>
+        <property name="userName" type="java.lang.String">
+            <column name="user_name"/>
+        </property>
+        <property name="userPassword" type="java.lang.String">
+            <column name="user_password"/>
+        </property>
+        <property name="userType" type="java.lang.String">
+            <column name="user_type"/>
+        </property>
+
+    </class>
+</hibernate-mapping>
